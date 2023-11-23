@@ -1,29 +1,59 @@
+스토리지의 93% 사용됨 … 소진 시 스토리지가 부족해 파일을 만들거나 수정하거나 업로드할 수 없게 됩니다. 3개월 동안 100GB 스토리지를 월 ₩2,400 ₩600에 이용하세요.
 <!DOCTYPE html>
+<!-- 2023.11.23 시나버스 shinahverse.kr -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>모두의 연구소</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Somentum</title>
 </head>
-<link rel="stylesheet" href="css/style.css" />
-
 <body>
+    
     <!-- 1. 로그인하기 -->
     <form id="frmLogin" class="hidden">
-        <input required maxlength="19" type="text" placeholder="당신의 이름을 적어 주세요."/>
-        <input type="submit" value="Log In" />
+    <input required maxlength="19" type="text" placeholder="당신의 이름을 적어 주세요."/>
+    <input type="submit" value="Log In" />
     </form>
 
     <h1 id="greeting" class="hidden"></h1>
-    
-    <!-- 2. 시계 만들기 -->
-    <h2 id="clock">00:00</h2>
 
-    <script src="js/greeting.js"></script>
-    <script src="js/background.js"></script>
-    <script src="js/quotes.js"></script>
+    <!-- 2. 시계 만들기 -->
+    <h2 id="clock">00:00:00</h2>
+
+    <!-- 4. todo 리스트 만들기 -->
+    <!--todo 리스트 입력-->
+    <form id="frmTodo">
+        <input type="text" placeholder="할 일을 적고 엔터키를 누르세요." required />
+    </form>
+    <!--todo 리스트 출력-->
+    <ul id="lstTodo"></ul>
+    <!--
+    <li>
+        <span>hello</span>
+        <button>X</button>
+    </li>
+        자바스크립트로 추가
+    -->
+
+    <!-- 5. 날씨 넣기 -->
+    <div id="weather">
+        <span>날씨</span>
+        <span>지역</span>
+    </div>
+
+    <!-- 3. 명언 넣기-->
+    <div id="quote">
+        <span></span>
+        <span></span>
+    </div>
+
+    <script src="js/hello.js"></script>
+    <!-- <script src="js/greeting.js"></script>
     <script src="js/clock.js"></script>
-    <script src="js/weather.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script> -->
 </body>
 </html>
